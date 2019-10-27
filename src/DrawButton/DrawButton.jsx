@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import './DrawButton.css';
 
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
+
 class DrawButton extends Component{
     constructor(props){
         super(props);
@@ -17,7 +20,9 @@ class DrawButton extends Component{
     render(props){
         return(
             <div className="buttonContainer">
-                <button className="btn" onClick={this.drawCard}>Draw Card</button>
+                <button className="btn" onClick={this.drawCard}>
+                <FontAwesomeIcon icon={faArrowRight} />
+                </button>
             </div>
         )
     }

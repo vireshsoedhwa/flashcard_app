@@ -1,22 +1,30 @@
 .card-container {
-    cursor: grab;
-    height: 400px;
+    /* height: 600px; */
     width: 90%;
-    /* min-width:400px; */
-    perspective: 800px;
+    /* min-height:600px; */
+    perspective: 1000px;
     position: relative;
-    margin: 0 auto;
+    /* margin: 0 auto; */
     transition: ease-in;
-    background-color: lightblue;
+    background-color: #004e73;
+    display: flex;
+    flex-wrap: wrap;
   }
   
+  img {max-width:100%;}
+
   .card {
-    height: 400px;
+    cursor: grab;
+    height: 300px;
     width: 100%;
-    position: absolute;
+    /* min-width:400px; */
     border: 1px solid #300;
     transform-style: preserve-3d;
     transition: all 0.4s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
   }
   
   .card:hover {
@@ -25,59 +33,83 @@
   }
   
   .card .front {
-    height: 400px;
+    height: 100%;
     width: 100%;
     backface-visibility: hidden;
     position: absolute;
     overflow: hidden;
     text-align: center;
-    background-color: rgba(255, 251, 251, 1);
+    background-color: #004e73;
+    border-radius: 25px;
   }
   
   .card .back {
-    height: 400px;
+    height: 100%;
     width: 100%;
     text-align: center;
+    overflow: hidden;
     transform: rotateY(180deg);
+    background-color: #004e73;
+    border-radius: 25px;
   }
   
-  .details-wrapper{
-    margin:0;
-    border: 1px solid green;
-    height: 50%;
+  .details{
+    /* height: 100%;  */
+    background-color: #6994ab; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 25px;
+    margin: 0 auto;
+
+  }
+
+  .details_wrapper{
+    /* height: 100%; */
+    background-color: #d1dbe3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
   }
 
   .priorities{
     color: #333;
-    font-size: 0.8em;
+    font-size: 2vh;
     text-align: left;
-    float:left;
-    width:50%;
-    overflow:hidden;
-
-    box-sizing: border-box;
+    /* float:left; */
+    width:100%;
+    /* overflow:hidden; */
+    display: block;
+    /* box-sizing: border-box;
     -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    border-right: 0.5em solid lightblue;
-
+    -webkit-box-sizing: border-box; */
+    /* border-right: 0.2em solid black; */
+    padding: 10px;
   }
   
   .concerns{
     color: #333;
-    font-size: 0.8em;    
+    font-size: 2vh;   
     text-align: left;
-    float:right;
-    width:50%;
-    overflow:hidden;    
+    /* float:right; */
+    width:100%;
+    overflow:hidden; 
+    padding: 10px;
   }
   
   .role{
-      color: rgba(200, 10, 10, 1);
-      font-size: 1.3em;
-      padding-top: 0%;
+      color: rgb(255, 255, 255);
+      font-size: 0.8em;
+      height: 100%;
+      /* padding-top: 0%; */   
+      background-color: #004e73;   
   }
 
   .question{
-    background-color: lightblue;
-    height: 50%;
+    background-color: #004e73;
+    color: white;
+    font-size: 0.8em;
+    height: 100%;
     }

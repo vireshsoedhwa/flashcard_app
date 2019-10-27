@@ -1,0 +1,33 @@
+.btn {
+    font-size: 1.5em;
+    border: none;
+    width: 100%;
+    height: 70px;
+    display: block;
+    text-align:center;
+    text-decoration:none;
+    color: #ecf0f1;
+    box-shadow: 0px 6px #004e73;
+    background: #004e73;
+    margin: 0 auto;
+    /* margin-top: 20px; */
+    border-radius: 0px 0px 25px 25px;
+  }
+  
+  .btn:active{
+    border: none;
+    position:relative;
+    top:3px;
+    box-shadow: 0px 0px #2c3e50;
+    background: #2c3e50;
+  }
+
+  .buttonContainer{
+    width: 90%;
+    /* height: 100%; */
+    background-color: #d1dbe3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0px 0px 25px 25px;
+  }

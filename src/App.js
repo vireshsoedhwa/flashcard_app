@@ -33,7 +33,9 @@ class App extends Component{
   }
 
   getRandomCard(currentCards){
+
     var card = currentCards[Math.floor(Math.random() * currentCards.length)];
+    
     return(card);
   }
 
@@ -54,22 +56,20 @@ class App extends Component{
     const priorities = this.state.currentCard.priorities;
     const concerns = this.state.currentCard.concerns;
 
+    // const imgid = '<img src="'+ this.state.currentCard.id + '.png" alt=""/>';
+
+    const imgid = this.state.currentCard.id;
+
+    console.log(imgid);
+
     return(
       <div className="App">
         <div className="cardRow">
           <Card role={this.state.currentCard.role} 
                 priorities={priorities}
                 concerns={concerns}
+                id={imgid}
                 /> 
-
-
-          {/* <div>
-            {data.map(function(d, idx){
-              return (<li key={idx}>{d.name}</li>)
-            })}
-          </div>          */}
-        
-          {/* <div>{this.state.currentCard.priorities}</div> */}
         
         </div>
 
@@ -78,14 +78,10 @@ class App extends Component{
         <div className="buttonRow">
           <DrawButton drawCard={this.updateCard}/>
         </div>
-
+        
       </div>
 
-      /* <div>
-        {data.map(function(d, idx){
-          return (<li key={idx}>{d.name}</li>)
-        })}
-      </div> */
+
 
 
       )

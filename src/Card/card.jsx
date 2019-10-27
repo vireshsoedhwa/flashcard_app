@@ -1,55 +1,47 @@
 import React from 'react';
 import './card.css';
+import placeholder from './0.png';
+
+// import images from './images';
 
 const Card = (props) => (
     <div className="card-container">
         <div className="card">
-            <div className="front">               
-                
-                <div className="question">
-                    Team member?
-
-                    
-
-
-                </div>
-
-
-                <div className="details-wrapper">
-                    <div className="priorities">
-                        {/* <ul>
-                            <li>{props.priorities}</li>
-                        </ul> */}
-
-                        {/* {props.priorities} */}
-                    
-                        <div className="priorities-title">Priorities</div>   
-
-                        {props.priorities.map(function(d, idx){
-                        return (<li key={idx}>{d.name}</li>)
-                        })}
-                    </div>
-
-                    <div className="concerns">  
-                        <div className="concerns-title">Concerns and Challenges</div>   
-
-                        {props.concerns.map(function(d, idx){
-                        return (<li key={idx}>{d.name}</li>)
-                        })}          
-                    </div>  
-                </div>
-
+            <div className="front">                
+                <div className="question"><h1>Team member?</h1>
+                    <img src={placeholder} alt="unknown"/>
+                </div>   
             </div>
             <div className="back">             
-                <div className="role">{props.role}
-                
-                
-                </div>    
-
-      
-            </div>
+                <div className="role"><h1>{props.role}</h1>               
+                    <img src={require(`./${props.id}.png`)} alt="known"/>
+                </div>       
+            </div>           
 
         </div>
+       
+       <div className="details">
+                    <div className="details_wrapper">
+                        <div className="priorities">
+                            <div>
+                                <div className="priorities-title">Priorities</div> 
+                                {props.priorities.map(function(d, idx){
+                                return (<li key={idx}>{d.row}</li>)
+                                })}
+                            </div>
+                        </div>
+
+                        <div className="concerns">                          
+                            <div>
+                                <div className="concerns-title">Concerns and Challenges</div>
+                                {props.concerns.map(function(d, idx){
+                                return (<li key={idx}>{d.row}</li>)
+                                })}    
+                            </div>
+                        </div>  
+                    </div>
+        </div>
+
     </div>
 )
 
