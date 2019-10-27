@@ -16,15 +16,17 @@ class App extends Component{
       //   {id: 2, role: "rolename_2", priorities: "priorities_2", concerns:"concerns_2"}
       // ],
       // cards: [],
-      currentCard: {
-      }
+      currentCard: { }
     }
+
+    
+
   }
 
   componentWillMount(){
     // const currentCards = this.state.cards;     
     const currentCards = CardData.cards;       
-    console.log(currentCards);
+    // console.log(currentCards);
     
     this.setState({
       cards: currentCards,
@@ -34,8 +36,7 @@ class App extends Component{
 
   getRandomCard(currentCards){
 
-    var card = currentCards[Math.floor(Math.random() * currentCards.length)];
-    
+    var card = currentCards[Math.floor(Math.random() * currentCards.length)];    
     return(card);
   }
 
@@ -51,7 +52,7 @@ class App extends Component{
 
     // const data =[{"name":"test1"},{"name":"test2"},{"name":"test3"}];
 
-    console.log(this.state.currentCard.priorities);
+    // console.log(this.state.currentCard.priorities);
 
     const priorities = this.state.currentCard.priorities;
     const concerns = this.state.currentCard.concerns;
@@ -60,7 +61,7 @@ class App extends Component{
 
     const imgid = this.state.currentCard.id;
 
-    console.log(imgid);
+    // console.log(imgid);
 
     return(
       <div className="App">
